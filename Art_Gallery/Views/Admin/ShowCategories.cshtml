@@ -1,0 +1,40 @@
+﻿@model IEnumerable<Art_Gallery.DAL.Models.Category>
+
+@{
+    ViewData["Title"] = "ShowCategories";
+    Layout = "~/Views/Shared/Admin.cshtml";
+}
+
+<h1>ShowCategories</h1>
+
+<p>
+    @*<a asp-controller="Admin" asp-action="CreateCategory" method="post">Create New</a>*@
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProductType)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProductType)
+            </td>
+            <td>
+                    @Html.ActionLink("See products", "ShowProductsByCategoryAdmin", new {  Id=item.Id  })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -1,0 +1,2 @@
+15/05/2023 21:03:29  - 'New product added': 'Rust marble' has been added to the Art Gallery
+16/05/2023 22:34:34  - 'New product added': 'Emerald city ring' has been added to the Art Gallery
